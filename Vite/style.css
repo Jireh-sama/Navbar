@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+:root {
+    --main-color: #0C134F;
+    --primary-color: #1D267D;
+    --sub-color: #5C469C; 
+    --text-color: #D4ADFC;
+    --main-font: 'Poppins', sans-serif;
+}
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+ }
+
+ body {
+    height: 1000px;
+    font-family: var(--main-font);
+    background-color: var(--main-color);
+    color: var(--text-color);
+ }
+
+ .wrap {
+    width: 100%;
+    height: 100%;
+ }
+
+ .navbar {
+    height: 45px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+ }
+
+.navbox {
+    padding: 0 .5rem;
+    display: flex;
+    font-size: 1rem;
+    align-items: center;
+}
+.navbox p {
+    padding: 0 .4rem;
+}
+.nav-links {
+    display: flex;
+    transition: top 300ms ease-in-out;
+}
+.buttons {
+    gap: .7rem;
+}
+#bars-menu {
+    position: relative;
+    right: -50px;
+    font-size: 1.2rem;
+    transition: right .5s ease;
+}
+.navbox .btn {
+    position: relative;
+    right: -27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    width: 4.5rem;
+    border-radius: 40px;
+    background-color: var(--sub-color);
+    transition: right .4s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ /* <------------MEDIA QUERY------------> */
+ @media all and (max-width: 600px) {
+    #bars-menu {
+        display: flex;
+        right: 0;
+    }
+    .navbox .btn {
+        right: 0;
+    }
+    .nav-links {
+        height: 8rem;
+        width: 12rem;
+        z-index: -1;
+        position: absolute;
+        top: -95px;
+        padding: 0;
+        right: 0;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 5px;
+        background-color: var(--sub-color);
+    }
+    .nav-links p{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-links p:nth-child(2){
+        border-top: 2px solid #384088;
+        border-bottom: 2px solid #384088;
+    }
+   
+ }
+ @media all and (min-width: 600px) {
+    
+ }
+ /* <------------MEDIA QUERY------------> */
+
+ .active {
+    top: 45px;
+}
